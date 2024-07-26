@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>My First Website</title>
+        <style>
+            body {
+                background-color: lightblue;
+                font-family: Arial, sans-serif;
+            }
+            h1 {
+                text-align: center;
+                color: darkred;
+                font-size: 36px;
+                height: 40px;
+
+            }
+            p {
+                font-size: 18px;
+            }
+            #myImage {
+                width: 200px;
+                height: 200px;
+                border: 1px solid black;
+                display: block;
+            }
+            #myLink {
+                color: blue;
+                text-decoration: underline;
+            }
+            </style>
+               </head>
+            
+ 
+    <body>
+        <script>
+           
+            function changeColor() {
+                var myHeading = document.querySelector('h1');
+                myHeading.style.color ='red';
+            }
+        </script>
+        <button onclick="changeContent()"> Click to change Content</button>
+        <h1 onclick="changeColor()">My First Website</h1>
+        <p >This is a paragraph.</p>
+        <img id="myImage" src="https://picsum.photos/200/300" alt="Random Image" ondblclick="toggle()">
+        <a id="myLink" href="https://www.example.com">Visit Example Website</a>
+        <button onclick="alert('Hello, World!')">Click me!</button>
+        <input id="input" value="text">
+        <input id="para" type="text">
+        <script>
+             //Task1
+             function changeContent() {
+                var myHeading = document.querySelector('h1');
+                myHeading.textContent = 'My New Website';
+            }
+           
+            //Task2
+            function toggle()
+            {
+                var myDiv = document.getElementById('myImage');
+                myDiv.style.display = myDiv.style.display === 'none'? 'block' : 'none';
+            }
+
+            //Task 3
+            var myHeading = document.querySelector('h1');       
+            myHeading.addEventListener('mouseover', function() {
+                this.style.backgroundColor = 'green';
+            });
+            //Task 4
+
+            myHeading.addEventListener('mouseout', function() {
+                this.style.backgroundColor ='red';
+            });
+            //Task 5
+            const input = document.querySelector(".inputBox");
+            input.addEventListener("keydown", function (event) {
+            console.log(event.key);
+            });
+
+            // Task 6
+            const input2 = document.querySelector(".inputBox");
+
+            input2.addEventListener("keydown", function (event) {
+            const para = document.querySelector("#para");
+            para.innerHTML = event.key;
+            });
+
+            //Task 7
+
+
+            
+
+
+        </script>
+    </body>
+</html>

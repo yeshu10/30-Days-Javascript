@@ -1,0 +1,84 @@
+<HTML>
+    <HEAD>
+        <TITLE>My First Web Page</TITLE>
+    </HEAD>    
+    <body>   
+           
+                <h1 id="heading1">Welcome to My Web Page!</h1>
+                <div class="colored" style="background-color: aqua;">
+                   <p>This text is blue.</p>
+                </div>
+                
+                <p>This is a simple HTML page.</p>
+                <button onclick="alert('Hello, World!')">Click me!</button>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+
+                <div id='remove'>WILL REMOVE IT</div>   
+
+                <div id='childremove'>
+                    <p>This is a paragraph</p>
+                    <p>This is another paragraph</p>
+                </div>
+                
+                <img src="https://m.media-amazon.com/images/I/41zG4GHpQUL._SX300_SY300_QL70_FMwebp_.jpg" alt="Placeholder image">
+            
+                <script>
+                    //Task 1
+                    document.getElementById("heading1").innerHTML =
+                        "Welcome to Updated Web Page";
+                   
+                  //Tak2
+                 
+                    document.querySelector('.colored').style.backgroundColor = 'RED'
+
+                    //Task 3
+                    let addDiv = document.createElement('div');
+                    addDiv.textContent = 'New div is added';
+                    document.body.appendChild(addDiv);
+
+                    //Task 4
+                    let addlist = document.createElement('li');
+                    addlist.textContent = 'New list item is added';
+                    document.querySelector('ul').appendChild(addlist);
+
+                    //Task 5
+                    let removeDiv = document.getElementById('remove');
+                    removeDiv.parentNode.removeChild(removeDiv);
+                    
+                    //Task 6
+                    let lastChild = document.getElementById('childremove');
+                    lastChild.lastElementChild.remove();
+
+                    // Task 7
+                    let changeAttribute = document.querySelector('img');
+                changeAttribute.src = "https://m.media-amazon.com/images/I/61k6o1dNhML._SX679_.jpg"
+
+                //Task 8
+
+                let cssClass = document.getElementById('task8');
+                cssClass.classList.add('centre-aligned');
+                cssClass.classList.remove('green-bg');
+
+                // Activity 5: Event handling
+                // Task 9: Add a click event listener to a button that changes the text content of a paragraph.
+                let button = document.querySelector('button');
+                button.addEventListener('click', () => {
+                    let para = document.querySelector('p');
+                    para.textContent = "Wohoo! The click worked!";
+                });
+
+                // Task 10: Add a mouseover event listener to an element that chnages its border color.
+                let mouseover = document. getElementById('task10');
+                mouseover.addEventListener('mouseover', () => {
+                    mouseover.style.border = '2px solid green';
+                });
+                mouseover.addEventListener('mouseout', () => {
+                    mouseover.style.border = ''; // resets to default
+                });
+                                </script>
+                    
+            </body>
